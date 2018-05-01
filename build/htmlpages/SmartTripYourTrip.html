@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>SmartTrip</title>
+
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="../css/SmartTrip.css" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+  <div class="container">
+      <div class="row st-header">
+          <a href="SmartTrip.html" class="homelink"><h1><strong>SmartTrip</strong></h1></a>
+      </div>
+      <div class="row st-body">
+        <div class="col-md-4 col-md-offset-4 main-content">
+          <div class="row">
+            <div class="header-div">
+              Trip 1
+            </div>
+          </div>
+
+          <div class="smart-list">
+            <div class="events row">
+              <div class="events-header">
+                <h3 style="display:inline;"><strong>Red Sox Game: </strong></h3>
+                <h3 style="display:inline;"><strong>5/05, </strong></h3>
+                <h3 style="display:inline;"><strong>$75</strong></h3>
+              </div>
+              <div class="events-body">
+                <h4>Redsox vs Yankees at 7:00PM<h4>
+              </div>
+              <div class="col-md-offset-9">
+                <button class="select-event-btn"><h4>delete</h4></button>
+              </div>
+            </div>
+
+            <div class="events row" id="your-event">
+              <div class="events-header">
+                <h3 style="display:inline;"><strong>Celtics Game: </strong></h3>
+                <h3 style="display:inline;"><strong>5/06, </strong></h3>
+                <h3 style="display:inline;"><strong>$95</strong></h3>
+              </div>
+              <div class="events-body">
+                <h4>Celtics vs. 76ers at 7:00pm<h4>
+              </div>
+              <div class="col-md-offset-9">
+                <button class="select-event-btn" onclick="remove()"><h4 id="select-text-1">delete</h4></button>
+              </div>
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+  <script src="../js/jquery.min.js"></script>
+
+  <script src="../js/bootstrap.min.js"></script>
+  <script>
+      function remove(){
+       document.getElementById("your-event").hidden = true;
+      }
+
+  </script>
+</body>
+
+</html>

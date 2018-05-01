@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>SmartTrip</title>
+
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="../css/SmartTrip.css" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+
+  <div class="container">
+      <div class="row st-header">
+          <a href="SmartTrip.html" class="homelink"><h1><strong>SmartTrip</strong></h1></a>
+      </div>
+      <div class="row st-body">
+        <div class="col-md-4 col-md-offset-4 main-content">
+          <div class="row">
+            <img class="profile-img" src="../img/user.png">
+          </div>
+          <div class="row">
+            <div class="input-div">
+              <input id="input" class="input" type="text" placeholder="James">
+
+            </div>
+            <div class="input-div">
+              <input id="email" class="input" type="text" placeholder="James6@gmail.com">
+            </div>
+            <div class="input-div">
+              <input id="password" class="input" type="text" placeholder="********">
+            </div>
+            <div class="save col-md-5 col-xs-5 col-sm-5 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+              <button class="btn" onclick="saveProfile()"><h2><strong>Save</strong></h2></button>
+            </div>
+            <div class="cancel col-md-5 col-xs-5 col-sm-5">
+              <button class="btn" onclick="cancel()"><h2><strong>Cancel</strong></h2></button>
+            </div>
+            <div class="col-md-10 col-xs-10 col-sm-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+              <form action="SmartTripYourTrip.html">
+              <button class="btn"><h2><strong>Your Trips</strong></h2></button>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+  <script src="../js/jquery.min.js"></script>
+
+  <script src="../js/bootstrap.min.js"></script>
+  <script>
+    function saveProfile(){
+       var temp = document.getElementById('input').value;
+       document.getElementById('input').value = "";
+       document.getElementById('input').placeholder = temp;
+       temp = document.getElementById('email').value;
+       document.getElementById('email').value = "";
+       document.getElementById('email').placeholder = temp;
+       temp = document.getElementById('password').value;
+       document.getElementById('password').value = "";
+       var newpass = '';
+       for (let value of temp) {
+         newpass = newpass + '*';
+       }
+       document.getElementById('password').placeholder = newpass;
+     }
+
+     function cancel(){
+       document.getElementById('input').value = "";
+       document.getElementById('email').value = "";
+       document.getElementById('password').value = "";
+      }
+
+  </script>
+</body>
+
+</html>
